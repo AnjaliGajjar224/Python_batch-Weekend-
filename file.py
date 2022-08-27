@@ -50,13 +50,40 @@ Syntax:
 
 # f.close()
 
-f = open("data.txt", "x")
+# f = open("data.txt", "x")
 
-for i in range(5):
-    f.write(input("Enter data: "))
+# for i in range(5):
+#     f.write(input("Enter data: "))
+
+# f = open("data.txt", "r")
+
+# print(f.read())
+
+# f.close()
+
+f = open("data.txt", "w")
+
+for i in range(10):
+    f.write(input("Enter number: "))
+
 
 f = open("data.txt", "r")
+sum = 0
+m = f.read()
+e = open("even.txt", "w")
+o = open("odd.txt", "w")
+for i in m:
+    j = int(i)
+    if j % 2 == 0:
+        sum += j
+        e.write(i)
+    else:
+        print("Odd number:",j)
+        o.write(i)
 
-print(f.read())
+print("Addition of even numbers are: ",sum)
 
 f.close()
+e.close()
+o.close()
+
