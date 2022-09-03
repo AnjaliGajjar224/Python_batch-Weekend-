@@ -123,27 +123,77 @@ with open("final.txt","r") as f:
 # print("Lower Case: ",count_lower)
 # print("Digits: ",count_digit)
 
-count_lines = 0
-count_A = 0
-count_B = 0
-count_C = 0
+# count_lines = 0
+# count_A = 0
+# count_B = 0
+# count_C = 0
 
-for line in data:
-    count_lines += 1
-    if line[0] == 'A':
-        count_A += 1
-    elif line[0] == 'B':
-        count_B += 1
-    elif line[0] == 'C':
-        count_C += 1
+# for line in data:
+#     count_lines += 1
+#     if line[0] == 'A':
+#         count_A += 1
+#     elif line[0] == 'B':
+#         count_B += 1
+#     elif line[0] == 'C':
+#         count_C += 1
 
-print("Lines: ",count_lines)
-print(count_A)
-print(count_B)
-print(count_C)
+# print("Lines: ",count_lines)
+# print(count_A)
+# print(count_B)
+# print(count_C)
 
-f.close()
+# f.close()
 
 """
 Replace all spaces from text with – (dash).
 """
+
+# f = open("final.txt", "r")
+
+# n = int(input("Enter number of characters you want to read: "))
+
+# print(f.read(n))
+
+# f.close()
+
+# f = open("final.txt","r")
+
+# line1 = f.readline()
+
+# print(line1)
+
+# f.close()
+
+# f = open("final.txt", "r")
+
+# l = f.readlines()
+
+# print(l[int(input("Enter no. of line you want to Read: "))-1])
+
+# f.close()
+
+
+"""
+tell ---> cursor position
+seek ---> to change position of cursor
+"""
+
+f = open("final.txt","r")
+
+# print(f.tell())         # Cursor Position       
+# print(f.read(10))  
+
+
+# print(f.tell())
+
+
+# f.seek(4,0)
+
+# print(f.tell())
+
+# print(f.read())
+
+f.seek(-10,0)
+
+print(f.tell())
+print(f.readline())
